@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mood Simulator</title>
+
+<style>
+  body {
+    font-family: Arial;
+    text-align: center;
+    padding: 40px;
+    background-color: #f5dfcb;
+    transition: 0.4s;
+  }
+
+  #character {
+    font-size: 100px;
+    margin: 20px;
+  }
+
+  button {
+    margin: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    background-color: #e6c09c;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+  }
+</style>
+</head>
+
+<body>
+
+<h1>Character Mood Simulator</h1>
+
+<div id="character">🙂</div>
+<p id="text">Click a mood!</p>
+
+<!-- Buttons -->
+<button onclick="setMood('happy')">😄 Happy</button>
+<button onclick="setMood('sad')">😢 Sad</button>
+<button onclick="setMood('angry')">😡 Angry</button>
+<button onclick="setMood('surprised')">😮 Surprised</button>
+<button onclick="setMood('neutral')">🙂 Neutral</button>
+<button onclick="setMood('excited')">🤩 Excited</button>
+<button onclick="setMood('sleepy')">😴 Sleepy</button>
+<button onclick="setMood('scared')">😱 Scared</button>
+<button onclick="setMood('loved')">😍 Loved</button>
+<button onclick="setMood('confused')">😕 Confused</button>
+<button onclick="setMood('disgusted')">🤮 Disgusted</button>
+
+<script>
+function setMood(mood) {
+  const character = document.getElementById("character");
+  const text = document.getElementById("text");
+
+  if (mood === "happy") {
+    character.textContent = "😄";
+    text.textContent = "Happy = Bright Yellow (#FFEB3B)";
+    document.body.style.backgroundColor = "#FFEB3B";
+
+  } else if (mood === "sad") {
+    character.textContent = "😢";
+    text.textContent = "Sad = Light Blue (#64B5F6)";
+    document.body.style.backgroundColor = "#64B5F6";
+
+  } else if (mood === "angry") {
+    character.textContent = "😡";
+    text.textContent = "Angry = Red (#F44336)";
+    document.body.style.backgroundColor = "#F44336";
+
+  } else if (mood === "surprised") {
+    character.textContent = "😮";
+    text.textContent = "Surprised = Orange (#FF9800)";
+    document.body.style.backgroundColor = "#FF9800";
+
+  } else if (mood === "neutral") {
+    character.textContent = "🙂";
+    text.textContent = "Neutral = Sage Green (#d5edd6)";
+    document.body.style.backgroundColor = "#d5edd6";
+
+  } else if (mood === "excited") {
+    character.textContent = "🤩";
+    text.textContent = "Excited = Hot Pink (#FF4081)";
+    document.body.style.backgroundColor = "#FF4081";
+
+  } else if (mood === "sleepy") {
+    character.textContent = "😴";
+    text.textContent = "Sleepy = Purple (#9C27B0)";
+    document.body.style.backgroundColor = "#9C27B0";
+
+  } else if (mood === "scared") {
+    character.textContent = "😱";
+    text.textContent = "Scared = Dark Blue (#1976D2)";
+    document.body.style.backgroundColor = "#1976D2";
+
+  } else if (mood === "loved") {
+    character.textContent = "😍";
+    text.textContent = "Loved = Pinkish Red (#E91E63)";
+    document.body.style.backgroundColor = "#E91E63";
+
+  } else if (mood === "confused") {
+    character.textContent = "😕";
+    text.textContent = "Confused = Light Brown (#A1887F)";
+    document.body.style.backgroundColor = "#A1887F";
+
+  } else if (mood === "disgusted") {
+    character.textContent = "🤮";
+    text.textContent = "Disgusted = Sickly Green (#8BC34A)";
+    document.body.style.backgroundColor = "#8BC34A";
+  }
+}
+</script>
+
+</body>
+</html>
